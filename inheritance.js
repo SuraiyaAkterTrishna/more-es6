@@ -6,10 +6,23 @@ class TeamMember {
         this.address = address;
     }
 }
-
 class Support extends TeamMember {
     groupSupportTime;
     designation = 'Support Web Dev';
+    constructor(name, address, time) {
+        super(name, address)
+        this.groupSupportTime = time;
+    }
+    
+}
+const aamir = new Support('Aamir Khan', 'BD', 11);
+const salman = new Support('Solaiman Khan', 'Dubai', 4);
+const sharuk = new Support('SRK Khan', 'Dubai', 9);
+console.log(aamir.name);
+//super ba parent class
+
+/* class Support extends TeamMember{ //Support hocche extended class, super class er property inherit korese
+    groupSupportTime;
     constructor(name, address, time) {
         super(name, address)
         this.groupSupportTime = time;
@@ -18,6 +31,39 @@ class Support extends TeamMember {
         console.log(this.name, 'start a support session');
     }
 }
+
+
+class StudentCare {
+    name;
+    designation = 'Support Web Dev';
+    address = 'BD';
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+    buildRoutine(student){
+        console.log(this.name, 'Build a routine for', student);
+    }
+}
+class Neptune {
+    name;
+    designation = 'Support Web Dev';
+    address = 'BD';
+    constructor(name, address) {
+        this.name = name;
+        this.address = address;
+    }
+    releaseApp(version){
+        console.log(this.name, 'Release app version', version);
+    }
+}
+const aamir = new Support('Amir Khan', 'Mumbai', 11);
+console.log(aamir);
+
+
+
+
+
 
 class StudentCare extends TeamMember {
     designation = 'Care Web Dev';
@@ -46,4 +92,4 @@ const akshay = new Support('Akshay Kumar', 'Dubai', 11);
 const alia = new StudentCare('Alia Bhatt', 'Mumbai');
 const ash = new NeptuneDev('Ash', 'Mumbai', 'Android studio');
 ash.releaseApp('1.4.5');
-console.log(ash.name);
+console.log(ash.name); */ 
